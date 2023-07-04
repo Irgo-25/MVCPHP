@@ -1,7 +1,7 @@
 <?php
 class About
 {
-    public function index()
+    public function indexc()
     {
         echo 'About/index';
     }
