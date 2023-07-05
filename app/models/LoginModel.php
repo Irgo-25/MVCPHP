@@ -1,5 +1,5 @@
 <?php
-
+/*
 class LoginModel
 {
 
@@ -10,3 +10,4 @@ class LoginModel
         return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 }
+*/
