@@ -33,7 +33,7 @@
                         <button type="submit" name="register" class="btn btn-primary mb-1 col-9" onclick="register()">Register</button>
                     </li>
                     <li>
-                        <a name="login" id="login" class="btn btn-primary" href="index.php" role="button">Login</a>
+                        <a name="login" id="login" class="btn btn-primary" href="Login" role="button">Login</a>
                     </li>
                 </ul>
             </form>

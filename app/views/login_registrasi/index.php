@@ -5,7 +5,7 @@
     <div class="card-body">
         <div class="container-fluid">
             <div class="form">
-                <form action="" method="post">
+                <form action="Login/login" method="post">
                     <ul style="list-style: none;">
                         <li>
                             <div class="mb-1 col-8">
@@ -21,7 +21,7 @@
                             <button type="submit" name="login" id="login" class="btn btn-primary mb-1 col-8">Login</button>
                         </li>
                         <li>
-                            <a name="registrasi" id="registrasi" class="btn btn-primary" href="registrasi.php" role="button">Registrasi</a>
+                            <a name="registrasi" id="registrasi" class="btn btn-primary" href="Registrasi" role="button">Registrasi</a>
                         </li>
                     </ul>
                 </form>
