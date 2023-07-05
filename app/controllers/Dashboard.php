@@ -1,9 +1,9 @@
 <?php
-class About
+class Dashboard
 {
-    public function indexc()
+    public function index()
     {
-        echo 'About/index';
+        echo 'Dashboard/index';
     }
     public function page()
     {

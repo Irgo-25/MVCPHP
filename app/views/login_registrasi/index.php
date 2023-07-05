@@ -5,7 +5,7 @@
     <div class="card-body">
         <div class="container-fluid">
             <div class="form">
-                <form action="Login/login" method="post">
+                <form action="Log/login" method="post">
                     <ul style="list-style: none;">
                         <li>
                             <div class="mb-1 col-8">

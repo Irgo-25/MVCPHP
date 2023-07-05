@@ -1,5 +1,5 @@
 <?php
-class Login extends Controller
+class Log extends Controller
 {
     public function index()
     {
@@ -15,5 +15,6 @@ class Login extends Controller
         $password = $_POST['password'];
 
         $data['login'] = $this->model('LoginModel')->getUser($username, $password);
+        var_dump($data['login']);
     }
 }
