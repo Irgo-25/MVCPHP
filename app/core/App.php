@@ -1,4 +1,5 @@
 <?php
+
 class App
 {
     protected $controller = 'Log';
@@ -8,6 +9,7 @@ class App
     public function __construct()
     {
         $url = $this->parseURL();
+
         // controller
         if (isset($url[0])) {
             if (file_exists('../app/controllers/' . $url[0] . '.php')) {
@@ -15,7 +17,6 @@ class App
                 unset($url[0]);
             }
         }
-
         require_once '../app/controllers/' . $this->controller . '.php';
         $this->controller = new $this->controller;
 
@@ -26,13 +27,13 @@ class App
                 unset($url[1]);
             }
         }
-        // parameters
+
+        // params
         if (!empty($url)) {
             $this->params = array_values($url);
-            var_dump($url);
         }
 
-        // memanggil controller, method dan parameters lalu dikirimkan jika ada
+        // jalankan controller & method, serta kirimkan params jika ada
         call_user_func_array([$this->controller, $this->method], $this->params);
     }
 

@@ -2,17 +2,21 @@
 
 class LoginModel
 {
+    /*
     private $db;
     public function __construct()
     {
         $this->db = new Database;
     }
 
-    public function getUser($username, $password)
+    public function getUser()
     {
-        $this->db->query("SELECT * FROM user WHERE username = :username, password = :password");
+        $this->db->query("SELECT * FROM user WHERE username = :username");
         $this->db->bind('username', $username);
-        $this->db->bind('password', $password);
-        return $this->db->resultSet();
+        return $this->db->single();
+    }
+    */
+    public function getUser()
+    {
     }
 }

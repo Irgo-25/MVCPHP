@@ -1,16 +1,14 @@
 <?php
 
-
 class Database
 {
     private $host = DB_HOST;
-    private $username = DB_USER;
-    private $password = DB_PASS;
+    private $user = DB_USER;
+    private $pass = DB_PASS;
     private $db_name = DB_NAME;
 
     private $dbh;
     private $stmt;
-    private $error;
 
     public function __construct()
     {
@@ -23,17 +21,17 @@ class Database
         ];
 
         try {
-            $this->dbh = new PDO($dsn, $this->username, $this->password, $option);
+            $this->dbh = new PDO($dsn, $this->user, $this->pass, $option);
         } catch (PDOException $e) {
-            $this->error = $e->getMessage();
-            echo $this->error;
+            die($e->getMessage());
         }
     }
-    // Menyetujui untuk membuat Query
+
     public function query($query)
     {
         $this->stmt = $this->dbh->prepare($query);
     }
+
     public function bind($param, $value, $type = null)
     {
         if (is_null($type)) {
@@ -51,24 +49,27 @@ class Database
                     $type = PDO::PARAM_STR;
             }
         }
+
         $this->stmt->bindValue($param, $value, $type);
     }
+
     public function execute()
     {
         $this->stmt->execute();
     }
+
     public function resultSet()
     {
         $this->execute();
         return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+
     public function single()
     {
         $this->execute();
-        $this->stmt->fetch(PDO::FETCH_ASSOC);
+        return $this->stmt->fetch(PDO::FETCH_ASSOC);
     }
 
-    //Get's the row count
     public function rowCount()
     {
         return $this->stmt->rowCount();
