@@ -12,7 +12,7 @@ class KaryawanModel
 
     public function getKaryawan()
     {
-        $this->db->query('SELECT * FROM ' . $this->tabel);
+        $this->db->query(' SELECT * FROM ' . $this->tabel);
         return $this->db->resultSet();
     }
 }
