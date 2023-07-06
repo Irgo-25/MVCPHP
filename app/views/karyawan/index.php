@@ -32,6 +32,12 @@
                             <?php foreach ($data['karyawan'] as $row) : ?>
                                 <tr>
                                     <td><?= $row['nik']; ?></td>
+                                    <td><?= $row['nama']; ?></td>
+                                    <td><?= $row['umur']; ?></td>
+                                    <td><?= $row['dept']; ?></td>
+                                    <td><?= $row['jabatan']; ?></td>
+                                    <td><?= $row['alamat']; ?></td>
+                                    <td><?= $row['tanggal_masuk']; ?></td>
                                 </tr>
                             <?php endforeach; ?>
                         </tbody>
