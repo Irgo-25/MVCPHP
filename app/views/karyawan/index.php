@@ -48,7 +48,7 @@
                                                     <i class="fa-solid fa-pen-to-square"></i>
                                                 </a>
                                                 <!-- Tombol Hapus -->
-                                                <a href="<?= BASEURL; ?>/Karyawan/Delete/<?= $row["nik"]; ?>" type="button" class="btn btn-danger" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip Content" onclick="alert('Apakah anda yakin ingin menghapusnya?')">
+                                                <a href="<?= BASEURL; ?>/Karyawan/Delete/git<?= $row["nik"]; ?>" type="button" class="btn btn-danger" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip Content" onclick="alert('Apakah anda yakin ingin menghapusnya?')">
                                                     <i class=" fa-solid fa-trash-can"></i>
                                                 </a>
                                             </td>
