@@ -5,10 +5,7 @@ class Log extends Controller
 
     public function index()
     {
-        $data['judul'] = 'Login';
-        $this->view('templates/header', $data);
-        $this->view('login_registrasi/index', $data);
-        $this->view('templates/footer');
+        $this->view('login_registrasi/index');
     }
 
     public function login()
@@ -25,7 +22,7 @@ class Log extends Controller
         } else {
             foreach ($data['login'] as $login) :
                 $_SESSION['id'] = $login['id'];
-                header("Location:" . BASEURL . "karyawan");
+                header("Location:" . BASEURL . "/karyawan");
             endforeach;
         }
     }
