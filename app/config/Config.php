@@ -1,5 +1,5 @@
 <?php
-define('BASEURL', 'http://localhost/mvc/public');
+define('BASEURL', 'http://localhost/SIKMVC/public');
 
 
 // Database

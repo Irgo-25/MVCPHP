@@ -44,9 +44,10 @@
                                             <td><?= $row['tanggal_masuk']; ?></td>
                                             <td style="text-align: center;">
                                                 <!-- Tombol Edit -->
-                                                <a href="<?= BASEURL; ?>/Karyawan/Edit/<?= $row["id_karyawan"]; ?>" type="button" class="btn btn-warning buttonEdit" data-bs-toggle="modal" data-bs-target="#form" data-id="<?= $row['id_karyawan']; ?>"><i class=" fa-solid fa-pen-to-square"></i></a>
+                                                <a href="<?= BASEURL; ?>/Karyawan/Edit/<?= $row["id"]; ?>" type="button" class="btn btn-primary tampilModalUbah" data-bs-toggle="modal" data-bs-target="#form" data-id="<?= $row['id']; ?>">Ubah
+                                                </a>
                                                 <!-- Tombol Hapus -->
-                                                <a href="<?= BASEURL; ?>/Karyawan/Delete/<?= $row["nik"]; ?>" type="button" class="btn btn-danger" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip Content" onclick="alert('Apakah anda yakin ingin menghapusnya?')">
+                                                <a href="<?= BASEURL; ?>/Karyawan/Delete/<?= $row["id"]; ?>" type="button" class="btn btn-danger" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip Content" onclick="alert('Apakah anda yakin ingin menghapusnya?')">
                                                     <i class=" fa-solid fa-trash-can"></i>
                                                 </a>
                                             </td>
@@ -69,22 +70,23 @@
                     <h1 class="modal-title fs-5" id="formModalLabel">Tambah Data Karyawan</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form action="<?= BASEURL; ?>/Karyawan/Add" method="post">
-                    <div class="modal-body">
+                <div class="modal-body">
+                    <form action="<?= BASEURL; ?>/Karyawan/Add" method="post">
+                        <input type="hidden" name="id" id="id">
                         <div class="form-floating mb-3">
-                            <input type="number" class="form-control" name="nik" id="floatingInput" placeholder="Masukan NIK">
+                            <input type="number" class="form-control" name="nik" id="nik" placeholder="Masukan NIK">
                             <label for="floatingInput">Nomor Induk Karyawan</label>
                         </div>
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" name="nama" id="floatingInput" placeholder="Masukan Nama Lengkap">
+                            <input type="text" class="form-control" name="nama" id="nama" placeholder="Masukan Nama Lengkap">
                             <label for="floatingInput">Nama Karyawan</label>
                         </div>
                         <div class="form-floating mb-3">
-                            <input type="number" class="form-control" name="umur" id="floatingNumber" placeholder="Umur">
+                            <input type="number" class="form-control" name="umur" id="umur" placeholder="Umur">
                             <label for="floatingPassword">Umur</label>
                         </div>
                         <div class="form-floating mb-3">
-                            <select class="form-select" id="floatingSelect" aria-label="Floating label select example" name="dept">
+                            <select class="form-select" id="dept" aria-label="Floating label select example" name="dept">
                                 <option selected>---Pilih Department---</option>
                                 <option value="Accounting">Accounting</option>
                                 <option value="IT">IT</option>
@@ -94,7 +96,7 @@
                             <label for="floatingSelect">Departement</label>
                         </div>
                         <div class="form-floating mb-3">
-                            <select class="form-select" id="floatingSelect" aria-label="Floating label select example" name="jabatan">
+                            <select class="form-select" id="jabatan" aria-label="Floating label select example" name="jabatan">
                                 <option selected>---Pilih Jabatan---</option>
                                 <option value="Manajer">Manajer</option>
                                 <option value="Supervisor">Supervisor</option>
@@ -103,18 +105,18 @@
                             <label for="floatingSelect">Jabatan</label>
                         </div>
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" name="alamat" id="floatingInput" placeholder="Masukan Alamat">
+                            <input type="text" class="form-control" name="alamat" id="alamat" placeholder="Masukan Alamat">
                             <label for="floatingInput">Alamat</label>
                         </div>
                         <div class="form-floating mb-3">
-                            <input type="date" class="form-control" name="tanggal_masuk" id="floatingDate" placeholder="Masukan Tanggal Masuk">
+                            <input type="date" class="form-control" name="tanggal_masuk" id="tanggal_masuk" placeholder="Masukan Tanggal Masuk">
                             <label for="floatingInput">Tanggal Masuk</label>
                         </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-                        <button type="submit" class="btn btn-primary">Tambah Karyawan</button>
-                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                    <button type="submit" class="btn btn-primary">Tambah Karyawan</button>
+                </div>
                 </form>
             </div>
         </div>

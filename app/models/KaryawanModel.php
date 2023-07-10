@@ -15,11 +15,10 @@ class KaryawanModel
         $this->db->query(' SELECT * FROM ' . $this->tabel);
         return $this->db->resultSet();
     }
-    public function getKaryawanById($id_karyawan)
+    public function getKaryawanById($id)
     {
-        $this->db->query(' SELECT * FROM ' . $this->tabel . ' WHERE id_karyawan = :id_karyawan');
-
-        $this->db->bind('id_karyawan', $id_karyawan);
+        $this->db->query('SELECT * FROM ' . $this->tabel . ' WHERE id=:id ');
+        $this->db->bind('id', $id);
         return $this->db->single();
     }
 
@@ -41,12 +40,12 @@ class KaryawanModel
         // mengembalikan data true
         return $this->db->rowCount();
     }
-    public function DeleteKaryawan($nik)
+    public function DeleteKaryawan($id)
     {
-        $query = "DELETE FROM data_karyawan WHERE nik = :nik";
+        $query = "DELETE FROM data_karyawan WHERE id = :id";
         // Melakukan Query ke Database
         $this->db->query($query);
-        $this->db->bind('nik', $nik);
+        $this->db->bind('id', $id);
         // ekseskusi data
         $this->db->execute();
         //Mengembalikan Nilai true 
@@ -55,14 +54,14 @@ class KaryawanModel
     public function EditKaryawan($data)
     {
         $query = "UPDATE data_karyawan SET
-                    nik=:nik,
-                    nama=:nama,
-                    umur=:umur,
-                    dept=:dept, 
-                    jabatan=:jabatan,
-                    alamat=:alamat,
-                    tanggal_masuk=:tanggal_masuk
-                    WHERE id_karyawan = :id_karyawan ";
+                    nik = :nik,
+                    nama = :nama,
+                    umur = :umur,
+                    dept = :dept, 
+                    jabatan = :jabatan,
+                    alamat = :alamat,
+                    tanggal_masuk = :tanggal_masuk
+                    WHERE id = :id";
 
 
         $this->db->query($query);
@@ -73,7 +72,7 @@ class KaryawanModel
         $this->db->bind('jabatan', $data['jabatan']);
         $this->db->bind('alamat', $data['alamat']);
         $this->db->bind('tanggal_masuk', $data['tanggal_masuk']);
-        $this->db->bind('id_karyawan', $data['id_karyawan']);
+        $this->db->bind('id', $data['id']);
 
         $this->db->execute();
 

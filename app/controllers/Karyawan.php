@@ -9,10 +9,10 @@ class Karyawan extends Controller
         $this->view('karyawan/index', $data);
         $this->view('templates/footer');
     }
-    public function Detail($id_karyawan)
+    public function Detail($id)
     {
         $data['judul'] = 'Data Karyawan';
-        $data['karyawan'] = $this->model('KaryawanModel')->getKaryawanById($id_karyawan);
+        $data['karyawan'] = $this->model('KaryawanModel')->getKaryawanById($id);
         $this->view('templates/header', $data);
         $this->view('karyawan/index', $data);
         $this->view('templates/footer');
@@ -28,9 +28,9 @@ class Karyawan extends Controller
             exit;
         }
     }
-    public function Delete($nik)
+    public function Delete($id)
     {
-        $data['Delete'] = $this->model('KaryawanModel')->DeleteKaryawan($nik);
+        $data['Delete'] = $this->model('KaryawanModel')->DeleteKaryawan($id);
         if ($data['Delete'] > 0) {
             header("Location: " . BASEURL . "/karyawan");
             exit;
@@ -39,14 +39,15 @@ class Karyawan extends Controller
             exit;
         }
     }
-    public function getEdit()
+    public function getedit()
     {
-        echo json_encode($this->model('KaryawanModel')->getKaryawanById($_POST['id_karyawan']));
+        echo json_encode($this->model('KaryawanModel')->getKaryawanById($_POST['id']));
     }
-    public function Edit()
+
+    public function edit()
     {
-        $data['Edit'] = $this->model('KaryawanModel')->EditKaryawan($_POST);
-        if ($data['Edit'] > 0) {
+
+        if ($this->model('KaryawanModel')->EditKaryawan($_POST) > 0) {
             header("Location: " . BASEURL . "/karyawan");
             exit;
         } else {
