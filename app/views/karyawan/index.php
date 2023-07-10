@@ -4,7 +4,7 @@
             <h1> Data Karyawan</h1>
             <div class="col text-right mb-3">
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#formModal">
+                <button type="button" class="btn btn-primary buttonAdd" data-bs-toggle="modal" data-bs-target="#form">
                     Tambah Data Karyawan
                 </button>
 
@@ -30,7 +30,7 @@
                                         <th></th>
                                     </tr>
                                 </thead>
-                                <tbody class="border-dark">
+                                <tbody class="border">
                                     <?php $No = 1; ?>
                                     <?php foreach ($data['karyawan'] as $row) : ?>
                                         <tr>
@@ -44,11 +44,9 @@
                                             <td><?= $row['tanggal_masuk']; ?></td>
                                             <td style="text-align: center;">
                                                 <!-- Tombol Edit -->
-                                                <a href="<?= $row["nik"]; ?>" type="button" class="btn btn-warning" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip Content">
-                                                    <i class="fa-solid fa-pen-to-square"></i>
-                                                </a>
+                                                <a href="<?= BASEURL; ?>/Karyawan/Edit/<?= $row["id_karyawan"]; ?>" type="button" class="btn btn-warning buttonEdit" data-bs-toggle="modal" data-bs-target="#form" data-id="<?= $row['id_karyawan']; ?>"><i class=" fa-solid fa-pen-to-square"></i></a>
                                                 <!-- Tombol Hapus -->
-                                                <a href="<?= BASEURL; ?>/Karyawan/Delete/git<?= $row["nik"]; ?>" type="button" class="btn btn-danger" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip Content" onclick="alert('Apakah anda yakin ingin menghapusnya?')">
+                                                <a href="<?= BASEURL; ?>/Karyawan/Delete/<?= $row["nik"]; ?>" type="button" class="btn btn-danger" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip Content" onclick="alert('Apakah anda yakin ingin menghapusnya?')">
                                                     <i class=" fa-solid fa-trash-can"></i>
                                                 </a>
                                             </td>
@@ -64,11 +62,11 @@
         </section>
     </div>
     <!-- Modal -->
-    <div class="modal fade" id="formModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal fade" id="form" tabindex="-1" role="dialog" aria-labelledby="formModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Data Karyawan</h1>
+                    <h1 class="modal-title fs-5" id="formModalLabel">Tambah Data Karyawan</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <form action="<?= BASEURL; ?>/Karyawan/Add" method="post">

@@ -18,10 +18,10 @@ class Log extends Controller
 
         session_start();
         if ($data['login'] == null) {
-            header("Location:" . BASEURL . "404");
+            header("Location:" . BASEURL . "/404");
         } else {
             foreach ($data['login'] as $login) :
-                $_SESSION['id'] = $login['id'];
+                $_SESSION['id_user'] = $login['id_user'];
                 header("Location:" . BASEURL . "/karyawan");
             endforeach;
         }
