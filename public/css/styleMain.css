@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+ul#Menu li a.active{
+  color: darkorange;
+}
+ul#Menu li .nav-link{
+  color: rgb(240, 235, 230);
+}
+
+.sidebar{
+  color: darkblue;
+}

@@ -6,6 +6,8 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="<?= BASEURL; ?>/assets/bootstrap/dist/js/bootstrap.js"></script>
+    <!-- adminLTE -->
+    <script src="<?= BASEURL; ?>/js/adminlte.js"></script>
     <!-- Fontawesome -->
     <script src="<?= BASEURL; ?>/assets/fontawesome6/js/all.min.js"></script>
     <!-- Data Table JS -->

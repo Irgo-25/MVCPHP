@@ -7,6 +7,7 @@ class Karyawan extends Controller
         $data['karyawan'] = $this->model('KaryawanModel')->getAllKaryawan();
         $this->view('templates/header', $data);
         $this->view('karyawan/index', $data);
+        $this->view('templates/sidebar');
         $this->view('templates/footer');
     }
     public function Detail($id)

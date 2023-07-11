@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="<?= BASEURL; ?>/assets/bootstrap/dist/css/bootstrap.min.css">
     <!-- FontAwesome -->
     <link rel="stylesheet" href="<?= BASEURL; ?>/assets/fontawesome6/css/all.min.css">
+    <!-- Admin LTE -->
+    <link rel="stylesheet" href="<?= BASEURL; ?>/css/adminlte.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="<?= BASEURL; ?>/css/styleMain.css">
     <!-- Data Table -->
     <link rel="stylesheet" href="<?= BASEURL; ?> /assets/DataTables/Buttons-2.3.6/css/buttons.bootstrap5.min.css">
     <link rel="stylesheet" href="<?= BASEURL; ?> /assets/DataTables/DataTables-1.13.4/css/dataTables.bootstrap5.min.css">
@@ -19,4 +23,24 @@
     <link rel="stylesheet" href="<?= BASEURL; ?> /assets/DataTables/Select-1.6.2/css/select.bootstrap5.min.css">
 </head>
 
-<body>
+<body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                </li>
+            </ul>
+
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a href="logout.php" class="nav-link" data-widget="navbar-user" role="button">
+                        <i class="fa-solid fa-user"></i>
+                        <span>Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>

@@ -1,4 +1,4 @@
-<body>
+<div class="content-wrapper" data-widget="iframe" data-loading-screen="750">
     <div class="container-fluid">
         <section class="content-header">
             <h1> Data Karyawan</h1>
@@ -7,8 +7,6 @@
                 <button type="button" class="btn btn-primary buttonAdd" data-bs-toggle="modal" data-bs-target="#form">
                     Tambah Data Karyawan
                 </button>
-
-
             </div>
         </section>
         <section>
@@ -121,3 +119,4 @@
             </div>
         </div>
     </div>
+</div>

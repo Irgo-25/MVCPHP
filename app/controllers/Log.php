@@ -22,7 +22,7 @@ class Log extends Controller
         } else {
             foreach ($data['login'] as $login) :
                 $_SESSION['id_user'] = $login['id_user'];
-                header("Location:" . BASEURL . "/karyawan");
+                header("Location:" . BASEURL . "/home");
             endforeach;
         }
     }

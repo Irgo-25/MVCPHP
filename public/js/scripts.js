@@ -37,3 +37,10 @@ $(function () {
     });
   });
 });
+
+var selector = 'ul#Menu li a.active';
+
+$(selector).on('click', function(){
+    $(selector).removeClass('active');
+    $(this).addClass('active');
+});
