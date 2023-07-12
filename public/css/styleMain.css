@@ -1,8 +1,5 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family:"SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
 }
 
 body {
@@ -12,13 +9,7 @@ body {
   overflow: hidden;
 }
 
-ul#Menu li a.active{
-  color: darkorange;
-}
-ul#Menu li .nav-link{
-  color: rgb(240, 235, 230);
-}
-
-.sidebar{
-  color: darkblue;
+nav{
+  background-color: coral;
+  border-radius: 0px 0px 10px 10px;
 }

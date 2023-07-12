@@ -1,4 +1,4 @@
-<div class="content-wrapper" data-widget="iframe" data-loading-screen="750">
+<div class="content-wrapper">
     <div class="container-fluid">
         <section class="content-header">
             <h1> Data Karyawan</h1>
@@ -17,7 +17,7 @@
                             <table id="table2" class="table table-bordered table-hover display nowrap" cellspacing="0" style="width:100%">
                                 <thead>
                                     <tr>
-                                        <th></th>
+                                        <th>No</th>
                                         <th>NIK</th>
                                         <th>Nama</th>
                                         <th>Umur</th>
