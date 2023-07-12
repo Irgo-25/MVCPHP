@@ -1,5 +1,5 @@
 * {
-  font-family:"SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+  font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
 body {
@@ -7,9 +7,4 @@ body {
   padding: 0;
   height: 100vh;
   overflow: hidden;
-}
-
-nav{
-  background-color: coral;
-  border-radius: 0px 0px 10px 10px;
 }

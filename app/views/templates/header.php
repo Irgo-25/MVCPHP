@@ -24,12 +24,11 @@
 </head>
 
 <body>
-    <nav class="navbar fixed top" role="scrollbar">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <i class="fa-solid fa-bars fa-lg" style="color: aliceblue;"></i>
-            <a href="#" class="nav-link" style="color: aliceblue;">
-                <i class="fa-solid fa-right-from-bracket fa-lg"> </i>
-                <span>Logout</span>
-            </a>
+            <a class="navbar-brand" href="#">Navbar</a>
+
+            <a class="navbar-brand" href="#">Logout</a>
+
         </div>
     </nav>
