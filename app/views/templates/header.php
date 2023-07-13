@@ -11,9 +11,9 @@
     <!-- FontAwesome -->
     <link rel="stylesheet" href="<?= BASEURL; ?>/assets/fontawesome6/css/all.min.css">
     <!-- Admin LTE -->
-    <!-- <link rel="stylesheet" href="<?= BASEURL; ?>/css/adminlte.min.css"> -->
+    <link rel="stylesheet" href="<?= BASEURL; ?>/css/adminlte.min.css">
     <!-- CSS -->
-    <link rel="stylesheet" href="<?= BASEURL; ?>/css/styleMain.css">
+    <link rel="stylesheet" href="<?= BASEURL; ?>/css/stylesidebar.css">
     <!-- Data Table -->
     <link rel="stylesheet" href="<?= BASEURL; ?> /assets/DataTables/Buttons-2.3.6/css/buttons.bootstrap5.min.css">
     <link rel="stylesheet" href="<?= BASEURL; ?> /assets/DataTables/DataTables-1.13.4/css/dataTables.bootstrap5.min.css">
@@ -23,12 +23,4 @@
     <link rel="stylesheet" href="<?= BASEURL; ?> /assets/DataTables/Select-1.6.2/css/select.bootstrap5.min.css">
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
-
-            <a class="navbar-brand" href="#">Logout</a>
-
-        </div>
-    </nav>
+<body class="hold-transition sidebar-mini layout-fixed">
