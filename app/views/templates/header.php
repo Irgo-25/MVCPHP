@@ -12,8 +12,6 @@
     <link rel="stylesheet" href="<?= BASEURL; ?>/assets/fontawesome6/css/all.min.css">
     <!-- Admin LTE -->
     <link rel="stylesheet" href="<?= BASEURL; ?>/css/adminlte.min.css">
-    <!-- CSS -->
-    <link rel="stylesheet" href="<?= BASEURL; ?>/css/stylesidebar.css">
     <!-- Data Table -->
     <link rel="stylesheet" href="<?= BASEURL; ?> /assets/DataTables/Buttons-2.3.6/css/buttons.bootstrap5.min.css">
     <link rel="stylesheet" href="<?= BASEURL; ?> /assets/DataTables/DataTables-1.13.4/css/dataTables.bootstrap5.min.css">
@@ -24,3 +22,17 @@
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+        <!-- Navbar -->
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <!-- Left navbar links -->
+            <div class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                </li>
+            </div>
+
+            <!-- Right navbar links -->
+        </nav>
+        <!-- /.navbar -->
